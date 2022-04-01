@@ -1,0 +1,16 @@
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "org.testng:testng:7.4.0"
+}
+
+test {
+    useTestNG() {
+        suites 'src/test/resources/delivery-test.xml'
+    }
+}
+
