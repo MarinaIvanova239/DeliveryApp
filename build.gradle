@@ -1,6 +1,5 @@
-sourceCompatibility = 1.8
-
 repositories {
+    apply plugin: "java"
     mavenCentral()
 }
 

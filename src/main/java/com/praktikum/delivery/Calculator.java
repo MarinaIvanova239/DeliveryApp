@@ -9,13 +9,13 @@ import java.util.Map;
 
 public class Calculator {
     private final static long minDeliveryPrice = 400;
-    private final Map<Workload, Double> workloadCoefficient = new HashMap<>(){{
+    private final Map<Workload, Double> workloadCoefficient = new HashMap<Workload, Double>(){{
         put(Workload.very_high, 1.6);
         put(Workload.high, 1.4);
         put(Workload.increased, 1.2);
         put(Workload.standard, 1.0);
     }};
-    private final Map<Dimension, Integer> dimensionCoefficient = new HashMap<>(){{
+    private final Map<Dimension, Integer> dimensionCoefficient = new HashMap<Dimension, Integer>(){{
         put(Dimension.large, 200);
         put(Dimension.small, 100);
     }};
