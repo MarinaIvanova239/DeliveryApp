@@ -5,6 +5,9 @@ repositories {
 
 dependencies {
     testCompile "org.testng:testng:7.4.0"
+    testImplementation 'org.hamcrest:hamcrest-core:2.2'
+
+
 }
 
 test {

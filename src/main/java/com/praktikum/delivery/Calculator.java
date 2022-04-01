@@ -20,7 +20,7 @@ public class Calculator {
         put(Dimension.small, 100);
     }};
 
-    public double countDelivery(double distanceInKm, Dimension size, boolean isFragile, Workload currentWorkload)
+    public double countDelivery(int distanceInKm, Dimension size, boolean isFragile, Workload currentWorkload)
             throws IncorrectDeliveryException {
         long deliveryPrice = 0;
 
@@ -32,10 +32,10 @@ public class Calculator {
         if (isFragile) deliveryPrice += 300;
 
         // take distance into account
-        if (distanceInKm <= 2.0) distanceInKm += 50;
-        else if (distanceInKm <= 10.0) distanceInKm += 100;
-        else if (distanceInKm <= 30.0) distanceInKm += 200;
-        else distanceInKm += 300;
+        if (distanceInKm <= 2) deliveryPrice += 50;
+        else if (distanceInKm <= 10) deliveryPrice += 100;
+        else if (distanceInKm <= 30) deliveryPrice += 200;
+        else deliveryPrice += 300;
 
         // take into account delivery size
         deliveryPrice += dimensionCoefficient.get(size);
